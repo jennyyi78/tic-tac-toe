@@ -1,26 +1,125 @@
 body {
     margin: 0;
+    background-color: #38302E;
 }
 
 .main-container {
     display: flex;
+    position: absolute;
     flex-direction: column;
     width: 100%;
-    height: 100%; 
+    height: 100%;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.header {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+    padding: 70px;
+    font-family: Helvetica, sans-serif;
+    color: #CCDAD1;
+    font-weight: bold;
+}
+
+.middle-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.player2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-text {
+    margin-top: 110px;
+    font-size: 35px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: #CCDAD1;
+}
+
+.turn-text {
+    font-size: 20px;
+    font-family: Helvetica;
+    color: #D17B0F;
+    font-weight: bold;
+}
+
+.board-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .game-board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     width: 500px;
     height: 500px;
-    border: solid;
     margin-right: auto;
     margin-left: auto;
 }
 
 .tile {
-    border: solid;
     text-align: center;
     font-size: 130px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-family: Helvetica;
+    color: #D17B0F;
+}
+
+.tile:hover {
+    background-color: #4d4441;
+}
+
+.horizontal-borders {
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #CCDAD1;
+    border-width: 5px;
+}
+
+.vertical-borders {
+    border-right: solid;
+    border-left: solid;
+    border-color: #CCDAD1;
+    border-width: 5px;
+}
+
+.restart-btn-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.new-game {
+    height: 50px;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: #CCDAD1;
+    background-color: #788585;
+    border: solid;
+    border-width: 4px;
+}
+
+.new-game:focus {
+    outline: none;
 }
